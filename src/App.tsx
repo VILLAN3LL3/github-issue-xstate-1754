@@ -4,10 +4,10 @@ import { machine } from './Machine';
 
 export const Context = createActorContext(machine);
 
-export const App = () => {
-  <Context.Provider options={{ context: { value: "initial value" }}}>
+export function App() {
+  return <Context.Provider options={{ context: { value: "initial value" } }}>
     <ChildComponent />
-  </Context.Provider>
+  </Context.Provider>;
 };
 
 export function ChildComponent() {
